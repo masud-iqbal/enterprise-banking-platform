@@ -3,9 +3,9 @@ POST http://localhost:8080/api/v1/customers
 Content-Type: application/json
 
 {
-  "firstName": "Masud",
-  "lastName": "Ikbal",
-  "email": "masud.cseu@gmail.com",
+  "firstName": "Abila",
+  "lastName": "Abdullah",
+  "email": "abilamrs@gmail.com",
   "phone": "+8801712243940"
 }
 
@@ -44,15 +44,15 @@ GET http://localhost:8080/api/v1/customers?page=0&size=10
 GET http://localhost:8080/api/v1/customers?page=-1&size=10
 
 ###Test A — Update customer
-PUT http://localhost:8080/api/v1/customers/f8e4ae8f-596a-4d0d-9c51-ce9714530886
+PUT http://localhost:8080/api/v1/customers/6729b6cb-3691-4aaa-9759-f6ea4f3966a4
 Content-Type: application/json
 
 {
   "firstName": "Masud",
   "lastName": "Ikbal",
-  "email": "masud.updated@example.com",
+  "email": "ikbal.cseu@example.com",
   "phone": "+8801812345678",
-  "status": "ACTIVE"
+  "status": "INACTIVE"
 }
 
 ###Test B — Deactivate customer

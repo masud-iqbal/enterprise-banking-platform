@@ -27,4 +27,9 @@ public record CustomerRequest(
         @NotNull(message = "Status is required")
         CustomerStatus status
 ) {
+        public CustomerRequest {
+                if(status == null) {
+                        status = CustomerStatus.ACTIVE;
+                }
+        }
 }
