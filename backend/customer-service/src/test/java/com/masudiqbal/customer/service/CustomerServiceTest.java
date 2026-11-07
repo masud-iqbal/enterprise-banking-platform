@@ -19,8 +19,6 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-
-@ExtendWith(MockitoExtension.class)
 public class CustomerServiceTest {
 
     @Mock
