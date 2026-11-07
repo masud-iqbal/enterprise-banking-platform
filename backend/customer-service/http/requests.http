@@ -1,0 +1,61 @@
+### Create employee / Test 1 - Duplicate email
+POST http://localhost:8080/api/v1/customers
+Content-Type: application/json
+
+{
+  "firstName": "Masud",
+  "lastName": "Ikbal",
+  "email": "masud.cseu@gmail.com",
+  "phone": "+8801712243940"
+}
+
+###Test 2 — Invalid email
+POST http://localhost:8080/api/v1/customers
+Content-Type: application/json
+
+{
+  "firstName": "Masud",
+  "lastName": "Ikbal",
+  "email": "invalid-email",
+  "phone": "+8801712345678"
+}
+
+###Test 3 — Missing first name
+POST http://localhost:8080/api/v1/customers
+Content-Type: application/json
+
+{
+  "firstName": "",
+  "lastName": "Ikbal",
+  "email": "another@example.com",
+  "phone": "+8801712345678"
+}
+
+###Test A — Retrieve one customer
+GET http://localhost:8080/api/v1/customers/f8e4ae8f-596a-4d0d-9c51-ce9714530886
+
+###Test B — Customer does not exist
+GET http://localhost:8080/api/v1/customers/00000000-0000-0000-0000-000000000001
+
+###Test C — Retrieve all customers
+GET http://localhost:8080/api/v1/customers?page=0&size=10
+
+###Test D — Invalid pagination
+GET http://localhost:8080/api/v1/customers?page=-1&size=10
+
+###Test A — Update customer
+PUT http://localhost:8080/api/v1/customers/f8e4ae8f-596a-4d0d-9c51-ce9714530886
+Content-Type: application/json
+
+{
+  "firstName": "Masud",
+  "lastName": "Ikbal",
+  "email": "masud.updated@example.com",
+  "phone": "+8801812345678",
+  "status": "ACTIVE"
+}
+
+###Test B — Deactivate customer
+PATCH http://localhost:8080/api/v1/customers/f8e4ae8f-596a-4d0d-9c51-ce9714530886/deactivate
+
+

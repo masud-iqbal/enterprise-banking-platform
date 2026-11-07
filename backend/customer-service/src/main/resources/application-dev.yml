@@ -1,0 +1,28 @@
+#POSTGRESQL
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/banking_customer_db}
+    username: ${DB_USERNAME:banking_app}
+    password: ${DB_PASSWORD:password}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      pool-name: DevHikariPool
+      maximum-pool-size: 10
+      minimum-idle: 2
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+  jpa:
+    hibernate:
+      ddl-auto: update #validate in production
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

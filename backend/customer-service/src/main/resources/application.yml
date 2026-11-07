@@ -1,0 +1,16 @@
+#spring
+spring:
+  application:
+    name: customer-service
+#server
+server:
+  servlet:
+    context-path: /
+  port: 8080
+  error:
+    include-message: always
+logging:
+  level:
+    root: INFO
+
+

@@ -1,0 +1,28 @@
+services:
+  customer-db:
+    image: postgres:17-alpine
+    container_name: banking-customer-db
+
+    environment:
+      POSTGRES_DB: banking_customer_db
+      POSTGRES_USER: banking_app
+      POSTGRES_PASSWORD: password
+
+    ports:
+      - "127.0.0.1:5432:5432"
+
+    volumes:
+      - customer_postgres_data:/var/lib/postgresql/data
+
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - pg_isready -U banking_app -d banking_customer_db
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+    restart: unless-stopped
+
+volumes:
+  customer_postgres_data:
