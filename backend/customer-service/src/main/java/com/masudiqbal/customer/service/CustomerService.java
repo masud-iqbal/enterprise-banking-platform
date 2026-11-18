@@ -74,7 +74,7 @@ public class CustomerService {
         Pageable pageable = PageRequest.of(
                 page,
                 size,
-                Sort.by(Sort.Direction.DESC, "createdAt")
+                Sort.by(Sort.Direction.DESC, "createdAt", "id")
         );
 
         Page<Customer> customerPage = customerRepository.findAll(pageable);

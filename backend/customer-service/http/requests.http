@@ -3,9 +3,9 @@ POST http://localhost:8080/api/v1/customers
 Content-Type: application/json
 
 {
-  "firstName": "Abila",
-  "lastName": "Abdullah",
-  "email": "abilamrs@gmail.com",
+  "firstName": "Masud",
+  "lastName": "Iqbal",
+  "email": "masud.cseu@gmail.com",
   "phone": "+8801712243940"
 }
 
