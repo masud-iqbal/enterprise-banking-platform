@@ -5,6 +5,7 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.orm.ObjectOptimisticLockingFailureException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -132,5 +133,23 @@ public class GlobalExceptionHandler {
                 null
         );
     }
+
+    @ExceptionHandler(ObjectOptimisticLockingFailureException.class)
+    public ResponseEntity<ApiErrorResponse> handleOptimisticLocking
+            (ObjectOptimisticLockingFailureException ex,
+             HttpServletRequest request) {
+        ApiErrorResponse error = new ApiErrorResponse(
+            Instant.now(),
+            HttpStatus.CONFLICT.value(),
+                "Conflict",
+                "This customer was modified by another transaction. Please refresh and try again.",
+                request.getRequestURI(),
+                Map.of()
+        );
+        return ResponseEntity
+                .status(HttpStatus.CONFLICT)
+                .body(error);
+    }
+
 }
 

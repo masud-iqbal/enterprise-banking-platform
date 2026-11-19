@@ -44,7 +44,7 @@ GET http://localhost:8080/api/v1/customers?page=0&size=10
 GET http://localhost:8080/api/v1/customers?page=-1&size=10
 
 ###Test A — Update customer
-PUT http://localhost:8080/api/v1/customers/6729b6cb-3691-4aaa-9759-f6ea4f3966a4
+PUT http://localhost:8080/api/v1/customers/bc2d4daf-a5dd-4654-ab09-709dcd0a57c7
 Content-Type: application/json
 
 {
