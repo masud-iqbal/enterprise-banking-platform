@@ -1,7 +1,7 @@
-# enterprise-banking-platform
+## enterprise-banking-platform
 Enterprise Banking Platform built with Java, Spring Boot, React, Kafka and PostgreSQL. Demonstrating microservices architecture and enterprise engineering practices.
 
-#backed
+## Nackend
 mvn clean install -DskipTests
 docker compose up -d
 docker compose ps 
@@ -14,7 +14,7 @@ CREATE DATABASE banking_customer_db OWNER banking_app;
 docker exec -it postgres psql -U banking_app -d banking_customer_db
 
 
-#frontend
+## Frontend
 npm create vite@latest my-first-app -- --template react-ts
 cd my-first-app
 npm install
