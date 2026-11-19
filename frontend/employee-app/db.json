@@ -1,0 +1,60 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Masud Iqbal",
+      "email": "masud@example.com",
+      "role": "Senior Java Engineer",
+      "department": "Engineering"
+    },
+    {
+      "id": 2,
+      "name": "Ayesha Rahman",
+      "email": "ayesha@example.com",
+      "role": "Product Manager",
+      "department": "Product"
+    },
+    {
+      "id": 3,
+      "name": "Tanvir Hasan",
+      "email": "tanvir@example.com",
+      "role": "QA Engineer",
+      "department": "Quality"
+    },
+    {
+      "id": 4,
+      "name": "Nusrat Jahan",
+      "email": "nusrat@example.com",
+      "role": "UI Designer",
+      "department": "Design"
+    },
+    {
+      "id": 5,
+      "name": "Rafiq Ahmed",
+      "email": "rafiq@example.com",
+      "role": "DevOps Engineer",
+      "department": "Engineering"
+    },
+    {
+      "id": 6,
+      "name": "Sadia Karim",
+      "email": "sadia@example.com",
+      "role": "HR Manager",
+      "department": "HR"
+    },
+    {
+      "name": "fdsfd",
+      "email": "fdsf@usjp.com",
+      "role": "fds",
+      "department": "fsd",
+      "id": 7
+    },
+    {
+      "name": "fsd",
+      "email": "dsasa@yahoo.com",
+      "role": "sdfds",
+      "department": "fsdfds",
+      "id": 8
+    }
+  ]
+}
